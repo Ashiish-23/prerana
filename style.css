@@ -1,6 +1,385 @@
-body{
-  padding: 25px;
+/* =========================================
+   1. VARIABLES & BASE SETUP
+========================================= */
+:root {
+    /* Primary Colors: Royal Blue / Navy Blue */
+    --primary-blue: #153E5C; 
+    --primary-dark: #0D273B;
+    
+    /* Accent Color: Orange */
+    --accent-orange: #F27A21; 
+    --accent-hover: #D96515;
+    
+    --bg-light: #F8F9FA;
+    --card-bg: #FFFFFF;
+    --text-main: #333333;
+    --text-muted: #666666;
+    
+    --transition-speed: 0.3s;
 }
-.title {
-	color: #5C6AC4;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* =========================================
+   2. HEADER & NAVIGATION
+========================================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: var(--card-bg);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-left h1 {
+    color: var(--primary-blue);
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+#nav-menu {
+    display: flex;
+    gap: 2rem;
+}
+
+#nav-menu a {
+    text-decoration: none;
+    color: var(--primary-blue);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color var(--transition-speed) ease;
+    position: relative;
+}
+
+#nav-menu a:hover {
+    color: var(--accent-orange);
+}
+
+#nav-menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--accent-orange);
+    transition: width var(--transition-speed) ease;
+}
+
+#nav-menu a:hover::after {
+    width: 100%;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logo {
+    height: 45px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    background: transparent;
+    border: none;
+    color: var(--primary-blue);
+    cursor: pointer;
+}
+
+/* =========================================
+   3. HERO SECTION
+========================================= */
+.hero {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-dark) 100%);
+    color: white;
+    text-align: center;
+    padding: 6rem 2rem;
+    border-bottom: 5px solid var(--accent-orange);
+}
+
+.hero h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   ABOUT US SECTION
+========================================= */
+.about-section {
+    padding: 5rem 5%;
+    background-color: #FFFFFF; 
+    text-align: center;
+}
+
+.about-content {
+    max-width: 900px; 
+    margin: 0 auto;   
+}
+
+.about-content h2 {
+    color: var(--primary-blue);
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.about-content h2::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background-color: var(--accent-orange);
+    bottom: -10px;
+    left: 25%;
+}
+
+.about-content p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+/* =========================================
+   4. SERVICES SECTION (SINGLE-CARD SLIDER)
+========================================= */
+.services-section {
+    padding: 5rem 5%;
+    text-align: center;
+}
+
+.services-section h2 {
+    color: var(--primary-blue);
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+.services-section h2::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background-color: var(--accent-orange);
+    bottom: -10px;
+    left: 25%;
+}
+
+.slider-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem; /* Space between buttons and the card */
+    max-width: 900px; /* Made slightly wider so text fits beautifully */
+    margin: 0 auto;
+}
+
+.slider-window {
+    overflow: hidden; /* Hides the inactive cards */
+    width: 100%;
+    border-radius: 8px;
+}
+
+.slider-track {
+    display: flex;
+    width: 100%;
+    transition: transform 0.4s ease-in-out; /* The sliding animation */
+}
+
+.slider-card {
+    flex: 0 0 100%; /* Strictly forces the card to take up 100% width */
+    max-width: 100%;
+    box-sizing: border-box; /* Keeps padding inside the container so it doesn't spill over */
+    
+    background-color: var(--card-bg);
+    padding: 3rem 2.5rem;
+    border: 1px solid #e5e7eb; /* A clean, subtle gray border instead of a shadow */
+    border-top: 4px solid var(--accent-orange);
+    border-radius: 8px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.slider-card h3 {
+    color: var(--primary-blue);
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.slider-card p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    flex-grow: 1;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    white-space: normal; /* Ensures the text wraps to the next line automatically */
+}
+
+.slider-btn {
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex-shrink: 0;
+}
+
+.slider-btn:hover {
+    background-color: var(--accent-orange);
+}
+
+.learn-more {
+    color: var(--accent-orange);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    transition: color var(--transition-speed) ease;
+}
+
+.learn-more:hover {
+    color: var(--accent-hover);
+}
+
+/* =========================================
+   5. MOBILE RESPONSIVENESS
+========================================= */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    #nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--card-bg);
+        flex-direction: column;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+    }
+
+    #nav-menu.active {
+        max-height: 300px;
+    }
+
+    #nav-menu a {
+        padding: 1.2rem 5%;
+        border-top: 1px solid #eee;
+        display: block;
+        width: 100%;
+    }
+
+    #nav-menu a::after {
+        display: none;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .slider-wrapper {
+        flex-direction: column; /* Stacks buttons below the card on mobile */
+        gap: 2rem;
+    }
+}
+
+/* =========================================
+   6. FOOTER SECTION
+========================================= */
+.site-footer {
+    background-color: var(--primary-dark);
+    color: white;
+    padding: 4rem 5% 1rem 5%;
+    margin-top: 4rem; 
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 3rem;
+}
+
+.footer-col h3 {
+    color: var(--accent-orange);
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.footer-col p {
+    color: #d1d5db; 
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-col ul li a {
+    color: #d1d5db;
+    text-decoration: none;
+    transition: color var(--transition-speed) ease;
+}
+
+.footer-col ul li a:hover {
+    color: var(--accent-orange); 
+    padding-left: 5px; 
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    color: #9ca3af;
+    font-size: 0.9rem;
 }
