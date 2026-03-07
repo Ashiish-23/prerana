@@ -15,3 +15,5 @@ card.style.transform="translateY(0)"
 })
 
 })
+
+console.log('Prerana Tech Solutions website loaded');
