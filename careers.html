@@ -1,285 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Careers | Prerana Tech Solutions</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers | Prerana Tech Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .job-card {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--brand-orange);
+            transition: all 0.3s ease;
+        }
+        .job-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(29, 42, 58, 0.1);
+        }
+        .form-card {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(29, 42, 58, 0.08);
+            border-top: 5px solid var(--brand-blue);
+        }
+    </style>
 </head>
+<body class="d-flex flex-column min-vh-100">
 
-<body>
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
-<div class="container">
-<a class="navbar-brand fw-bold" href="index.html">
-<i class="fa-solid fa-microchip"></i> Prerana Tech Solutions
-</a>
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" title="Toggle navigation">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-<ul class="navbar-nav">
-<li class="nav-item">
-<a class="nav-link" href="about.html">About</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="services.html">Services</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="products.html">Products</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="contact.html">Contact</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="Team.html">Team</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="blog.html">Blog</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="careers.html">Careers</a>
-</li>
+    <nav class="navbar navbar-expand-lg sticky-top custom-navbar shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+                <i class="fa-solid fa-microchip brand-icon"></i> 
+                <span>Prerana Tech</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center gap-2">
+    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+    <li class="nav-item"><a class="nav-link" href="Team.html">Team</a></li>
+    
+    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+    <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+    
+    <li class="nav-item d-none d-lg-block"><span class="nav-divider" style="width: 1px; height: 24px; background: #ddd; display: inline-block;"></span></li>
+    <li class="nav-item mt-2 mt-lg-0">
+        <a class="nav-link btn-contact bg-orange" href="contact.html">Contact Us</a>
+    </li>
 </ul>
-</div>
-</div>
-</nav>
-
-<!-- HEADER -->
-
-<section class="bg-primary text-white text-center py-5">
-
-<div class="container">
-
-<h1 class="fw-bold">Careers at Prerana Tech Solutions</h1>
-
-<p class="lead">
-Join our innovative team and build the future of technology
-</p>
-
-</div>
-
-</section>
-
-
-<!-- JOB LISTINGS -->
-
-<section class="py-5">
-
-<div class="container">
-
-<h2 class="text-center text-primary fw-bold mb-5">Current Openings</h2>
-
-<div class="row g-4">
-
-<!-- Job 1 -->
-
-<div class="col-md-3">
-
-<div class="card shadow h-100 text-center p-3">
-
-<i class="fa-solid fa-laptop-code fa-2x text-primary mb-3"></i>
-
-<h5>Software Developer</h5>
-
-<p class="small">
-Develop web applications, enterprise software,
-and automation systems.
-</p>
-
-</div>
-
-</div>
-
-
-<!-- Job 2 -->
-
-<div class="col-md-3">
-
-<div class="card shadow h-100 text-center p-3">
-
-<i class="fa-solid fa-network-wired fa-2x text-primary mb-3"></i>
-
-<h5>Network Engineer</h5>
-
-<p class="small">
-Install and maintain networking infrastructure
-for organizations.
-</p>
-
-</div>
-
-</div>
-
-
-<!-- Job 3 -->
-
-<div class="col-md-3">
-
-<div class="card shadow h-100 text-center p-3">
-
-<i class="fa-solid fa-headset fa-2x text-primary mb-3"></i>
-
-<h5>Technical Support</h5>
-
-<p class="small">
-Provide IT support for hardware, software
-and network systems.
-</p>
-
-</div>
-
-</div>
-
-
-<!-- Job 4 -->
-
-<div class="col-md-3">
-
-<div class="card shadow h-100 text-center p-3">
-
-<i class="fa-solid fa-chart-line fa-2x text-primary mb-3"></i>
-
-<h5>Sales Executive</h5>
-
-<p class="small">
-Promote CCTV, networking equipment
-and IT solutions.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- JOB APPLICATION FORM -->
-
-<section class="bg-light py-5">
-
-<div class="container">
-
-<h2 class="text-center text-primary fw-bold mb-4">
-Apply for a Job
-</h2>
-
-<div class="row justify-content-center">
-
-<div class="col-md-8">
-
-<form class="shadow p-4 bg-white rounded">
-
-<div class="mb-3">
-
-<label class="form-label">Full Name</label>
-
-<input type="text" class="form-control" placeholder="Enter your full name" required>
-
-</div>
-
-
-<div class="mb-3">
-
-<label class="form-label">Email Address</label>
-
-<input type="email" class="form-control" placeholder="Enter your email" required>
-
-</div>
-
-
-<div class="mb-3">
-
-<label class="form-label">Phone Number</label>
-
-<input type="tel" class="form-control" placeholder="Enter your phone number">
-
-</div>
-
-
-<div class="mb-3">
-
-<label class="form-label">Position Applying For</label>
-
-<select class="form-control">
-
-<option>Software Developer</option>
-<option>Network Engineer</option>
-<option>Technical Support Engineer</option>
-<option>Sales Executive</option>
-
-</select>
-
-</div>
-
-
-<div class="mb-3">
-
-<label class="form-label">Upload Resume</label>
-
-<input type="file" class="form-control">
-
-</div>
-
-
-<div class="mb-3">
-
-<label class="form-label">Message</label>
-
-<textarea class="form-control" rows="4"
-placeholder="Tell us about yourself"></textarea>
-
-</div>
-
-
-<div class="text-center">
-
-<button class="btn btn-primary px-4">
-Submit Application
-</button>
-
-</div>
-
-</form>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- FOOTER -->
-
-<footer class="bg-dark text-white text-center p-4">
-
-<p>
-© 2026 Prerana Tech Solutions | Careers
-</p>
-
-</footer>
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow-1 bg-light-gray">
+        
+        <section class="py-5 text-center text-white" style="background: linear-gradient(135deg, var(--brand-blue-dark) 0%, var(--brand-blue) 100%);">
+            <div class="container py-4">
+                <h1 class="display-4 fw-bold">Join Our Team</h1>
+                <p class="lead text-white-50 mb-0">Build the future of technology with Prerana Tech Solutions.</p>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container py-4">
+                <div class="text-center mb-5">
+                    <span class="text-orange fw-bold text-uppercase tracking-wider">Careers</span>
+                    <h2 class="fw-bold text-dark mt-2">Current Openings</h2>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="job-card p-4 text-center h-100">
+                            <i class="fa-solid fa-laptop-code fa-2x text-orange mb-3"></i>
+                            <h5 class="fw-bold text-blue">Software Developer</h5>
+                            <p class="text-muted small mb-0">Develop web applications, enterprise software, and automation systems.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="job-card p-4 text-center h-100">
+                            <i class="fa-solid fa-network-wired fa-2x text-orange mb-3"></i>
+                            <h5 class="fw-bold text-blue">Network Engineer</h5>
+                            <p class="text-muted small mb-0">Install and maintain secure networking infrastructure for organizations.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="job-card p-4 text-center h-100">
+                            <i class="fa-solid fa-headset fa-2x text-orange mb-3"></i>
+                            <h5 class="fw-bold text-blue">Technical Support</h5>
+                            <p class="text-muted small mb-0">Provide expert IT support for hardware, software, and network systems.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="job-card p-4 text-center h-100">
+                            <i class="fa-solid fa-chart-line fa-2x text-orange mb-3"></i>
+                            <h5 class="fw-bold text-blue">Sales Executive</h5>
+                            <p class="text-muted small mb-0">Promote CCTV, networking equipment, and comprehensive IT solutions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 bg-white">
+            <div class="container py-4">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="form-card p-4 p-md-5">
+                            <h3 class="fw-bold text-blue text-center mb-4">Apply Now</h3>
+                            
+                            <form id="applicationForm">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-semibold text-muted small">Full Name</label>
+                                        <input type="text" name="Name" class="form-control py-2" placeholder="Your Name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-semibold text-muted small">Email Address</label>
+                                        <input type="email" name="Email" class="form-control py-2" placeholder="Your Email" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-semibold text-muted small">Phone Number</label>
+                                        <input type="tel" name="Phone" class="form-control py-2" placeholder="Your Phone Number" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-semibold text-muted small">Position Applying For</label>
+                                        <select name="Position" class="form-select py-2" required>
+                                            <option value="" disabled selected>Select a position...</option>
+                                            <option value="Software Developer">Software Developer</option>
+                                            <option value="Network Engineer">Network Engineer</option>
+                                            <option value="Technical Support">Technical Support</option>
+                                            <option value="Sales Executive">Sales Executive</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label fw-semibold text-muted small">Upload Resume (PDF only)</label>
+                                        <input placeholder="Insert your resume" type="file" id="resumeFile" class="form-control py-2" accept=".pdf" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label fw-semibold text-muted small">Cover Letter / Message</label>
+                                        <textarea name="Message" class="form-control py-2" rows="4" placeholder="Tell us about your experience..." required></textarea>
+                                    </div>
+                                    <div class="col-12 mt-4 text-center">
+                                        <button type="submit" id="submitBtn" class="btn btn-orange px-5 py-3 rounded-3 w-100">
+                                            <i class="fa-solid fa-paper-plane me-2"></i> Submit Application
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="custom-footer text-center py-4">
+        <div class="container">
+            <h5 class="fw-bold mb-2">Prerana Tech Solutions</h5>
+            <p class="small text-white-50 mb-3">
+                IT Services • Software Development • CCTV Surveillance • Networking Solutions
+            </p>
+            <div class="border-top border-secondary pt-3 mt-3">
+                <p class="mb-0 small text-white-50">© 2026 Prerana Tech Solutions. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // STEP 1: Paste your new Google Web App URL here
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyozRM_pLT952d1S7zkGWGtNbgF8JB_dryGv2CuhqGOUnXJjtrspaW-zmknWRmXC75PQg/exec'; 
+        
+        const form = document.getElementById('applicationForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const fileInput = document.getElementById('resumeFile');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault(); 
+            
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin me-2"></i> Uploading Application...';
+
+            const file = fileInput.files[0];
+            if (!file) {
+                alert("Please select a file to upload.");
+                resetButton();
+                return;
+            }
+
+            // Read the file and convert it to Base64
+            const reader = new FileReader();
+            reader.onload = function() {
+                // The result looks like: "data:application/pdf;base64,JVBERi0xLjQK..."
+                // We split it to only grab the actual Base64 string at the end.
+                const base64String = reader.result.split(',')[1];
+                
+                const data = new URLSearchParams();
+                data.append("Name", form.Name.value);
+                data.append("Email", form.Email.value);
+                data.append("Phone", form.Phone.value);
+                data.append("Position", form.Position.value);
+                data.append("Message", form.Message.value);
+                
+                // Add the file metadata and content
+                data.append("filename", file.name);
+                data.append("mimeType", file.type);
+                data.append("fileContent", base64String);
+
+                // Send to Google Apps Script
+                fetch(scriptURL, {
+                    method: 'POST',
+                    body: data
+                })
+                .then(response => {
+                    alert('Success! Your application and resume have been submitted.');
+                    form.reset(); 
+                    resetButton();
+                })
+                .catch(error => {
+                    alert('Oops! Something went wrong. Please try again.');
+                    console.error('Error!', error.message);
+                    resetButton();
+                });
+            };
+            
+            // This triggers the reader.onload function above
+            reader.readAsDataURL(file);
+        });
+
+        function resetButton() {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane me-2"></i> Submit Application';
+        }
+    </script>
 </body>
-
 </html>

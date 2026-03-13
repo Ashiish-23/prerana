@@ -1,339 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Products | Prerana Tech Solutions</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Prerana Tech Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .product-card {
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(21, 62, 92, 0.15) !important;
+        }
+        .product-image-wrapper {
+            overflow: hidden;
+            height: 220px;
+        }
+        .product-image-wrapper img {
+            transition: transform 0.5s ease;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .product-card:hover .product-image-wrapper img {
+            transform: scale(1.08);
+        }
+    </style>
 </head>
+<body class="d-flex flex-column min-vh-100">
 
-<body>
-
-
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
-<div class="container">
-<a class="navbar-brand fw-bold" href="index.html">
-<i class="fa-solid fa-microchip"></i> Prerana Tech Solutions
-</a>
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" title="Toggle navigation">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-<ul class="navbar-nav">
-<li class="nav-item">
-<a class="nav-link" href="about.html">About</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="services.html">Services</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="products.html">Products</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="contact.html">Contact</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="Team.html">Team</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="blog.html">Blog</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="careers.html">Careers</a>
-</li>
+    <nav class="navbar navbar-expand-lg sticky-top custom-navbar shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+                <i class="fa-solid fa-microchip brand-icon"></i> 
+                <span>Prerana Tech</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center gap-2">
+    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+    <li class="nav-item"><a class="nav-link" href="Team.html">Team</a></li>
+    
+    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+    <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+    
+    <li class="nav-item d-none d-lg-block"><span class="nav-divider" style="width: 1px; height: 24px; background: #ddd; display: inline-block;"></span></li>
+    <li class="nav-item mt-2 mt-lg-0">
+        <a class="nav-link btn-contact bg-orange" href="contact.html">Contact Us</a>
+    </li>
 </ul>
-</div>
-</div>
-</nav>
-
-
-
-<!-- PAGE TITLE -->
-
-<section class="bg-light py-5 text-center">
-
-<div class="container">
-
-<h1 class="text-primary fw-bold">Our Products & Solutions</h1>
-
-<p class="lead">
-Providing high-quality technology products and infrastructure solutions
-</p>
-
-</div>
-
-</section>
-
-
-
-<!-- PRODUCTS SECTION -->
-
-<div class="container py-5">
-
-<div class="row g-4">
-
-
-<!-- CCTV -->
-
-<div class="col-md-4">
-
-<div class="card shadow h-100">
-
-<img src="https://picsum.photos/400/250?cctv" class="card-img-top">
-
-<div class="card-body">
-
-<h5 class="card-title">CCTV Surveillance Systems</h5>
-
-<p class="card-text">
-Advanced HD and IP CCTV camera systems for homes, offices,
-industries, and public infrastructure with remote monitoring.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- LAPTOPS -->
-
-<div class="col-md-4">
-
-<div class="card shadow h-100">
-
-<img src="https://picsum.photos/400/250?laptop" class="card-img-top">
-
-<div class="card-body">
-
-<h5 class="card-title">Laptops</h5>
-
-<p class="card-text">
-Business laptops, student laptops, and high-performance
-professional systems from leading global brands.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- DESKTOPS -->
-
-<div class="col-md-4">
-
-<div class="card shadow h-100">
-
-<img src="https://picsum.photos/400/250?desktop" class="card-img-top">
-
-<div class="card-body">
-
-<h5 class="card-title">Desktop Computers</h5>
-
-<p class="card-text">
-Customized desktop systems for offices, institutions,
-developers, and enterprise-level computing needs.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- UPS -->
-
-<div class="col-md-4">
-
-<div class="card shadow h-100">
-
-<img src="https://picsum.photos/400/250?ups" class="card-img-top">
-
-<div class="card-body">
-
-<h5 class="card-title">UPS & Power Backup</h5>
-
-<p class="card-text">
-Reliable power backup solutions for computers,
-servers, and networking infrastructure.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- MOBILE DEVICES -->
-
-<div class="col-md-4">
-
-<div class="card shadow h-100">
-
-<img src="https://picsum.photos/400/250?mobile" class="card-img-top">
-
-<div class="card-body">
-
-<h5 class="card-title">Mobile Devices</h5>
-
-<p class="card-text">
-Latest smartphones and mobile solutions for
-business communication and enterprise mobility.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- GPS -->
-
-<div class="col-md-4">
-
-<div class="card shadow h-100">
-
-<img src="https://picsum.photos/400/250?gps" class="card-img-top">
-
-<div class="card-body">
-
-<h5 class="card-title">GPS Tracking Devices</h5>
-
-<p class="card-text">
-Vehicle and asset tracking systems with real-time
-monitoring and route analytics.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- NETWORK DEVICES -->
-
-<div class="col-md-4">
-
-<div class="card shadow h-100">
-
-<img src="https://picsum.photos/400/250?network" class="card-img-top">
-
-<div class="card-body">
-
-<h5 class="card-title">Network Devices</h5>
-
-<p class="card-text">
-Routers, switches, firewalls, and wireless access
-points for reliable and secure networking.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- ACCESSORIES -->
-
-<div class="col-md-4">
-
-<div class="card shadow h-100">
-
-<img src="https://picsum.photos/400/250?electronics" class="card-img-top">
-
-<div class="card-body">
-
-<h5 class="card-title">Computer Accessories</h5>
-
-<p class="card-text">
-Printers, monitors, keyboards, storage devices,
-and other essential IT accessories.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- IT INFRASTRUCTURE -->
-
-<div class="col-md-4">
-
-<div class="card shadow h-100">
-
-<img src="https://picsum.photos/400/250?server" class="card-img-top">
-
-<div class="card-body">
-
-<h5 class="card-title">IT Infrastructure Solutions</h5>
-
-<p class="card-text">
-Complete IT infrastructure setup including servers,
-network architecture, and data security systems.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-</div>
-
-</div>
-
-
-
-<!-- FOOTER -->
-
-<footer class="bg-primary text-white text-center p-4">
-
-<div class="container">
-
-<p class="mb-1">
-© 2026 Prerana Tech Solutions
-</p>
-
-<p class="small">
-Technology Products | Surveillance Systems | IT Infrastructure | Networking
-</p>
-
-</div>
-
-</footer>
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow-1 bg-light-gray">
+
+        <section class="py-5 text-center text-white" style="background: linear-gradient(135deg, var(--brand-blue-dark) 0%, var(--brand-blue) 100%);">
+            <div class="container py-4">
+                <h1 class="display-4 fw-bold">Our Products & Solutions</h1>
+                <p class="lead text-white-50 mb-0">Providing high-quality technology hardware and enterprise infrastructure.</p>
+            </div>
+        </section>
+
+        <div class="container py-5">
+            <div class="row g-4 mt-2 mb-5">
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card product-card h-100 rounded-4 shadow-sm bg-white">
+                        <div class="product-image-wrapper rounded-top-4">
+                            <img alt="High quality CCTV camera" src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=600&q=80">
+                        </div>
+                        <div class="card-body p-4 text-center">
+                            <h5 class="fw-bold text-blue mb-3">CCTV Surveillance</h5>
+                            <p class="text-muted small mb-0">Advanced HD and IP CCTV camera systems for homes, offices, industries, and public infrastructure with remote monitoring.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card product-card h-100 rounded-4 shadow-sm bg-white">
+                        <div class="product-image-wrapper rounded-top-4">
+                            <img alt="Modern business laptop" src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=600&q=80">
+                        </div>
+                        <div class="card-body p-4 text-center">
+                            <h5 class="fw-bold text-blue mb-3">Premium Laptops</h5>
+                            <p class="text-muted small mb-0">Business laptops, student laptops, and high-performance professional systems from leading global brands.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card product-card h-100 rounded-4 shadow-sm bg-white">
+                        <div class="product-image-wrapper rounded-top-4">
+                            <img alt="Desktop workstation setup" src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=600&q=80">
+                        </div>
+                        <div class="card-body p-4 text-center">
+                            <h5 class="fw-bold text-blue mb-3">Desktop Computers</h5>
+                            <p class="text-muted small mb-0">Customized desktop systems for offices, educational institutions, developers, and enterprise-level computing.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card product-card h-100 rounded-4 shadow-sm bg-white">
+                        <div class="product-image-wrapper rounded-top-4">
+                            <img alt="Network switches and cables" src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80">
+                        </div>
+                        <div class="card-body p-4 text-center">
+                            <h5 class="fw-bold text-blue mb-3">Network Devices</h5>
+                            <p class="text-muted small mb-0">Enterprise-grade routers, switches, hardware firewalls, and wireless access points for reliable, secure networking.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card product-card h-100 rounded-4 shadow-sm bg-white">
+                        <div class="product-image-wrapper rounded-top-4">
+                            <img alt="Server power backup racks" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80">
+                        </div>
+                        <div class="card-body p-4 text-center">
+                            <h5 class="fw-bold text-blue mb-3">UPS & Power Backup</h5>
+                            <p class="text-muted small mb-0">Reliable uninterruptible power supply (UPS) and backup solutions for computers, servers, and network infrastructure.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card product-card h-100 rounded-4 shadow-sm bg-white">
+                        <div class="product-image-wrapper rounded-top-4">
+                            <img alt="Server room infrastructure" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80">
+                        </div>
+                        <div class="card-body p-4 text-center">
+                            <h5 class="fw-bold text-blue mb-3">IT Infrastructure</h5>
+                            <p class="text-muted small mb-0">Complete IT infrastructure setup including robust servers, data storage arrays, and physical network architecture.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card product-card h-100 rounded-4 shadow-sm bg-white">
+                        <div class="product-image-wrapper rounded-top-4">
+                            <img alt="Business smartphones" src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80">
+                        </div>
+                        <div class="card-body p-4 text-center">
+                            <h5 class="fw-bold text-blue mb-3">Mobile Devices</h5>
+                            <p class="text-muted small mb-0">Latest smartphones and mobile solutions designed for unified business communication and enterprise mobility.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card product-card h-100 rounded-4 shadow-sm bg-white">
+                        <div class="product-image-wrapper rounded-top-4">
+                            <img alt="Computer accessories" src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=600&q=80">
+                        </div>
+                        <div class="card-body p-4 text-center">
+                            <h5 class="fw-bold text-blue mb-3">Computer Accessories</h5>
+                            <p class="text-muted small mb-0">Printers, ultra-wide monitors, mechanical keyboards, secure storage devices, and all essential IT peripherals.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card product-card h-100 rounded-4 shadow-sm bg-white">
+                        <div class="product-image-wrapper rounded-top-4">
+                            <img alt="GPS navigation on screen" src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=600&q=80">
+                        </div>
+                        <div class="card-body p-4 text-center">
+                            <h5 class="fw-bold text-blue mb-3">GPS Tracking Devices</h5>
+                            <p class="text-muted small mb-0">Advanced vehicle and asset tracking hardware with real-time software monitoring and complex route analytics.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="custom-footer text-center py-4">
+        <div class="container">
+            <h5 class="fw-bold mb-2">Prerana Tech Solutions</h5>
+            <p class="small text-white-50 mb-3">
+                Technology Products • Surveillance Systems • IT Infrastructure • Networking
+            </p>
+            <div class="border-top border-secondary pt-3 mt-3">
+                <p class="mb-0 small text-white-50">© 2026 Prerana Tech Solutions. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -1,135 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact | Prerana Tech Solutions</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Prerana Tech Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
-<div class="container">
-<a class="navbar-brand fw-bold" href="index.html">
-<i class="fa-solid fa-microchip"></i> Prerana Tech Solutions
-</a>
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" title="Toggle navigation">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-<ul class="navbar-nav">
-<li class="nav-item">
-<a class="nav-link" href="about.html">About</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="services.html">Services</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="products.html">Products</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="contact.html">Contact</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="Team.html">Team</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="blog.html">Blog</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="careers.html">Careers</a>
-</li>
+<body class="d-flex flex-column min-vh-100">
+
+    <nav class="navbar navbar-expand-lg sticky-top custom-navbar shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+                <i class="fa-solid fa-microchip brand-icon"></i> 
+                <span>Prerana Tech</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center gap-2">
+    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+    <li class="nav-item"><a class="nav-link" href="Team.html">Team</a></li>
+    
+    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+    <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+    
+    <li class="nav-item d-none d-lg-block"><span class="nav-divider" style="width: 1px; height: 24px; background: #ddd; display: inline-block;"></span></li>
+    <li class="nav-item mt-2 mt-lg-0">
+        <a class="nav-link btn-contact bg-orange" href="contact.html">Contact Us</a>
+    </li>
 </ul>
-</div>
-</div>
-</nav>
-<!-- PAGE HEADER -->
-<section class="bg-light py-5 text-center">
-<div class="container">
-<h1 class="text-primary fw-bold">Contact Us</h1>
-<p class="lead">
-We would love to hear from you. Get in touch with us for IT solutions and services.
-</p>
-</div>
-</section>
-<!-- CONTACT SECTION -->
-<section class="py-5">
-<div class="container">
-<div class="row g-4">
-<!-- CONTACT INFO -->
-<div class="col-md-5">
-<h3 class="text-primary mb-4">Get In Touch</h3>
-<div class="mb-3">
-<p>
-<i class="fa-solid fa-location-dot text-primary"></i>
-<strong> Address:</strong> Davanagere, Karnataka, India
-</p>
-</div>
-<div class="mb-3">
-<p>
-<i class="fa-solid fa-phone text-primary"></i>
-<strong> Phone:</strong> +91 9008540530
-</p>
-</div>
-<div class="mb-3">
-<p>
-<i class="fa-solid fa-envelope text-primary"></i>
-<strong> Email:</strong> ravikumar.ms2727@gmail.com
-</p>
-</div>
-<div class="mt-4">
-<a href="mailto:ravikumar.ms2727@gmail.com" class="btn btn-primary">
-<i class="fa-solid fa-paper-plane"></i> Send Email
-</a>
-</div>
-</div>
-<!-- CONTACT FORM -->
-<div class="col-md-7">
-<div class="card shadow p-4">
-<h4 class="text-primary mb-3">Send Us a Message</h4>
-<form>
-<div class="row">
-<div class="col-md-6 mb-3">
-<label class="form-label">Full Name</label>
-<input type="text" class="form-control" placeholder="Your Name">
-</div>
-<div class="col-md-6 mb-3">
-<label class="form-label">Email</label>
-<input type="email" class="form-control" placeholder="Your Email">
-</div>
-</div>
-<div class="mb-3">
-<label class="form-label">Subject</label>
-<input type="text" class="form-control" placeholder="Subject">
-</div>
-<div class="mb-3">
-<label class="form-label">Message</label>
-<textarea class="form-control" rows="5" placeholder="Write your message"></textarea>
-</div>
-<button class="btn btn-primary">
-Submit Message
-</button>
-</form>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- GOOGLE MAP -->
-<section class="container pb-5">
-<div class="ratio ratio-16x9">
-<iframe src="https://maps.google.com/maps?q=Davanagere&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
-</div>
-</section>
-<!-- FOOTER -->
-<footer class="bg-primary text-white text-center p-3">
-<p>
-© 2026 Prerana Tech Solutions. All Rights Reserved.
-</p>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow-1">
+        
+        <section class="py-5 text-center text-white" style="background: linear-gradient(135deg, var(--brand-blue-dark) 0%, var(--brand-blue) 100%);">
+            <div class="container py-4">
+                <h1 class="display-4 fw-bold">Contact Us</h1>
+                <p class="lead text-white-50 mb-0">We would love to hear from you. Get in touch for IT solutions and services.</p>
+            </div>
+        </section>
+
+        <div class="container py-5 mt-4 mb-5">
+            <div class="row g-5 align-items-start">
+                
+                <div class="col-lg-5">
+                    <h2 class="fw-bold text-blue mb-4">Get In Touch</h2>
+                    <p class="text-muted mb-5">Whether you need custom software, advanced networking, or IT AMC services, our team is ready to assist you.</p>
+                    
+                    <div class="info-box">
+                        <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Address</h6>
+                            <p class="text-muted mb-0">Davanagere, Karnataka, India</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-box">
+                        <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Phone</h6>
+                            <p class="text-muted mb-0">+91 9008540530</p>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Email</h6>
+                            <p class="text-muted mb-0">ravikumar.ms2727@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="contact-card p-4 p-md-5">
+                        <h3 class="fw-bold text-blue mb-4">Send Us a Message</h3>
+                        
+                        <form id="googleSheetForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold text-muted small">Full Name</label>
+                                    <input type="text" name="Name" class="form-control py-2" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold text-muted small">Email Address</label>
+                                    <input type="email" name="Email" class="form-control py-2" placeholder="Your Email" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label fw-semibold text-muted small">Subject</label>
+                                    <input type="text" name="Subject" class="form-control py-2" placeholder="Subject" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label fw-semibold text-muted small">Message</label>
+                                    <textarea name="Message" class="form-control py-2" rows="5" placeholder="Write your message here..." required></textarea>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" id="submitBtn" class="btn btn-orange w-100 py-3 rounded-3">
+                                        <i class="fa-solid fa-paper-plane me-2"></i> Submit Message
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="custom-footer text-center py-4">
+        <div class="container">
+            <h5 class="fw-bold mb-2">Prerana Tech Solutions</h5>
+            <p class="small text-white-50 mb-3">
+                IT Services • Software Development • CCTV Surveillance • Networking Solutions
+            </p>
+            <div class="border-top border-secondary pt-3 mt-3">
+                <p class="mb-0 small text-white-50">© 2026 Prerana Tech Solutions. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // STEP 1: Paste your Google Web App URL between the quotes below
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzpWEHMc-gmgv_MCtD51wVG8U5OwXgmxhw2hskYNbTD-AGqpSwCCINqaFyDXWz2ya742g/exec'; 
+        
+        const form = document.getElementById('googleSheetForm');
+        const submitBtn = document.getElementById('submitBtn');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault(); // Stops the page from reloading
+            
+            // Change button text while sending
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin me-2"></i> Sending...';
+
+            // Convert form data so Google Sheets can read it properly
+            const formData = new FormData(form);
+            const data = new URLSearchParams();
+            for (const pair of formData) {
+                data.append(pair[0], pair[1]);
+            }
+
+            // Send to Google Sheets
+            fetch(scriptURL, {
+                method: 'POST',
+                body: data
+            })
+            .then(response => {
+                alert('Success! Your message has been sent to the Prerana Tech team.');
+                form.reset(); // Clears the form
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane me-2"></i> Submit Message';
+            })
+            .catch(error => {
+                alert('Oops! Something went wrong. Please try again.');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane me-2"></i> Submit Message';
+                console.error('Error!', error.message);
+            });
+        });
+    </script>
 </body>
 </html>
