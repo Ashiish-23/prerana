@@ -38,4 +38,4 @@ Because this is a static website, no complex local server setup is required to v
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/yourusername/prerana-tech-website.git](https://github.com/yourusername/prerana-tech-website.git)
+   git clone [https://github.com/Ashiish-23/prerana.git](https://github.com/Ashiish-23/prerana.git)
