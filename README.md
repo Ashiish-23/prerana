@@ -37,4 +37,5 @@ The website consists of the following interconnected pages:
 Because this is a static website, no complex local server setup is required to view the frontend.
 
 1. **Clone the repository:**
-   ```bash ""git clone https://github.com/Ashiish-23/prerana.git""
+   ```bash
+      git clone [https://github.com/Ashiish-23/prerana.git](https://github.com/Ashiish-23/prerana.git)
